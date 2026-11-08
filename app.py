@@ -20,35 +20,8 @@ st.set_page_config(
 # ==========================================
 
 st.markdown("""
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-/* =====================================
-   HIDE DEFAULT STREAMLIT NAVBAR
-===================================== */
-
-header[data-testid="stHeader"] {
-    display: none !important;
-    height: 0 !important;
-    visibility: hidden !important;
-}
-
-div[data-testid="stToolbar"] {
-    display: none !important;
-}
-
-#MainMenu {
-    visibility: hidden !important;
-}
-
-footer {
-    visibility: hidden !important;
-}
-
-/* =====================================
-   MAIN APPLICATION
-===================================== */
 
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
@@ -56,19 +29,13 @@ html, body, [class*="css"] {
 
 .stApp {
     background: #f4f7fb;
-    overflow-x: hidden;
 }
 
 .block-container {
-    padding-top: 1.2rem !important;
-    padding-bottom: 3rem !important;
-    margin-top: 0 !important;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     max-width: 1450px;
 }
-
-/* =====================================
-   SIDEBAR
-===================================== */
 
 [data-testid="stSidebar"] {
     background: #101c35;
@@ -103,10 +70,6 @@ html, body, [class*="css"] {
     font-size: 13px;
 }
 
-/* =====================================
-   HERO SECTION
-===================================== */
-
 .hero {
     background: linear-gradient(115deg, #132849, #174b79);
     padding: 30px;
@@ -128,20 +91,12 @@ html, body, [class*="css"] {
     margin-bottom: 0;
 }
 
-/* =====================================
-   SECTION HEADINGS
-===================================== */
-
 .section-heading {
     font-size: 20px;
     font-weight: 750;
     color: #14243d;
     margin: 20px 0 14px 0;
 }
-
-/* =====================================
-   METRIC CARDS
-===================================== */
 
 .metric-card {
     background: white;
@@ -172,10 +127,6 @@ html, body, [class*="css"] {
     font-size: 11px;
     margin-top: 4px;
 }
-
-/* =====================================
-   FORM
-===================================== */
 
 .form-card {
     background: white;
@@ -209,10 +160,6 @@ div[data-testid="stForm"] {
     color: white;
 }
 
-/* =====================================
-   PREDICTION RESULTS
-===================================== */
-
 .result-card {
     background: white;
     border: 1px solid #e5eaf2;
@@ -240,10 +187,6 @@ div[data-testid="stForm"] {
     font-size: 14px;
 }
 
-/* =====================================
-   STREAMLIT METRICS
-===================================== */
-
 div[data-testid="stMetric"] {
     background: white;
     border: 1px solid #e5eaf2;
@@ -255,10 +198,6 @@ hr {
     border-color: #e5eaf2;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
-
 .footer {
     text-align: center;
     color: #94a3b8;
@@ -266,7 +205,6 @@ hr {
     padding: 25px 0;
 }
 </style>
-
 """, unsafe_allow_html=True)
 
 # ==========================================
