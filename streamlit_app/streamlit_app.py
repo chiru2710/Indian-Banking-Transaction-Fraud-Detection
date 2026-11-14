@@ -18,9 +18,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-API_URL = os.getenv(
+API_URL = st.secrets.get(
     "FINGUARD_API_URL",
-    "http://127.0.0.1:8000"
+    os.getenv("FINGUARD_API_URL", "http://127.0.0.1:8000")
 ).rstrip("/")
 
 TIMEOUT = 30
