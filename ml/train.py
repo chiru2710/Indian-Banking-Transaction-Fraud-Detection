@@ -23,7 +23,7 @@ start_time = time.time()
 # 1. Load dataset
 print("Loading dataset...")
 
-df = pd.read_csv("indian_banking_transactions.csv")
+df = pd.read_csv("data\indian_banking_transactions.csv")
 
 print("Original Dataset Shape:", df.shape)
 
