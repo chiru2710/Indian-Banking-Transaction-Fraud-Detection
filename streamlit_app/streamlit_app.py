@@ -5,9 +5,19 @@ import requests
 import streamlit as st
 
 # ============================================================
-# FINGUARD AI - API CONFIGURATION
+# FINGUARD AI - WHITE CORPORATE GLASS STREAMLIT APPLICATION
+# Colors: White, Orange and Black
+# Backend: Existing FastAPI
 # ============================================================
 
+st.set_page_config(
+    page_title="FinGuard AI | Transaction Intelligence",
+    page_icon="◈",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+# DEPLOYED FASTAPI BACKEND
 API_URL = st.secrets.get(
     "FINGUARD_API_URL",
     os.getenv(
@@ -617,9 +627,7 @@ def render_result(result, amount):
 
     with st.expander("View raw API response"):
         st.json(result)
-
-
-# ============================================================
+        # ============================================================
 # SIDEBAR
 # ============================================================
 
@@ -931,7 +939,6 @@ if page == "Fraud Detection":
                 "◈  ANALYZE TRANSACTION",
                 use_container_width=True
             )
-
     # --------------------------------------------------------
     # RIGHT SIDE DASHBOARD PANELS
     # --------------------------------------------------------
