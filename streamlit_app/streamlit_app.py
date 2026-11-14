@@ -1,4 +1,3 @@
-
 import os
 from datetime import date
 
@@ -6,21 +5,15 @@ import requests
 import streamlit as st
 
 # ============================================================
-# FINGUARD AI - WHITE CORPORATE GLASS STREAMLIT APPLICATION
-# Colors: White, Orange and Black
-# Backend: Existing FastAPI
+# FINGUARD AI - API CONFIGURATION
 # ============================================================
-
-st.set_page_config(
-    page_title="FinGuard AI | Transaction Intelligence",
-    page_icon="◈",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 API_URL = st.secrets.get(
     "FINGUARD_API_URL",
-    os.getenv("FINGUARD_API_URL", "http://127.0.0.1:8000")
+    os.getenv(
+        "FINGUARD_API_URL",
+        "https://indian-banking-transaction-fraud.onrender.com"
+    )
 ).rstrip("/")
 
 TIMEOUT = 30
